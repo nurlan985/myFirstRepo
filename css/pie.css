@@ -1,0 +1,28 @@
+body{
+    background-image: url("../Images/silverware.jpg");
+    background-attachment: fixed;
+    font-family: Georgia, Garamond, "sans-serif";
+    background-color: #ffffff;
+    color: #404040;
+    font-size: 11pt;
+}
+a{
+    color: #A4A400;
+}
+.comment{
+    margin: 20px;
+    font-style: italic;
+    background-color: yellow;
+}
+.strike{
+    text-decoration: line-through;
+}
+
+
+.left{
+    text-align: left;
+}
+
+.right{
+    text-align: right;
+}
