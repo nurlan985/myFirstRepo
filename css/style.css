@@ -1,3 +1,7 @@
+body{
+    margin: 0;
+}
+
 header{
     background-image: url("../Images/header.jpg");
     background-repeat: no-repeat;
