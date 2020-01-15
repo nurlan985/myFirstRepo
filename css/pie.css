@@ -12,7 +12,7 @@ a{
 .comment{
     margin: 20px;
     font-style: italic;
-    background-color: yellow;
+    background-color: #ffffa8;
 }
 .strike{
     text-decoration: line-through;
