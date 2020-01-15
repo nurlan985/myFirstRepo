@@ -10,7 +10,9 @@ a{
     color: #A4A400;
 }
 .comment{
-    margin: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 10px;
     font-style: italic;
     background-color: #ffffa8;
 }
