@@ -1,0 +1,72 @@
+header{
+    background-image: url("../Images/header.jpg");
+    background-repeat: no-repeat;
+    height: 250px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 30px;
+    overflow: hidden;
+    background-color: #5252524a;
+
+}
+
+nav  li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+}
+a{
+    text-decoration: none;
+}
+
+a.active, a:active, a:focus, a:hover {
+    text-decoration: underline;
+    color: #00b249;
+}
+/* Change the link color to #111 (black) on hover */
+nav li a:hover {
+    background-color: #111;
+}
+main{
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+main>div>p::first-letter{
+    font-size: 32px;
+}
+
+main>div>    img {
+    border-radius: 150px;
+    max-width:250px;
+    margin-top: -125px;
+    margin-left: 50px;
+}
+main ul{
+    font-size: 20px;
+}
+main > p{
+    margin: 5px;
+}
+
+footer{
+    padding: 10px;
+    background-color: #eaeaea4f;
+}
+
+.film-link{
+    color: #455aee;
+}
+
+.mood-img{
+    margin-left: 50px  ;
+    width: 350px;
+}
