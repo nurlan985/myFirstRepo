@@ -70,3 +70,14 @@ footer{
     margin-left: 50px  ;
     width: 350px;
 }
+
+ol dl dd, ol dl dt {
+    font-size: 0.8vw;
+}
+ol dl dt {
+    color: #cc9900;
+    font-weight: bold;
+}
+ol dl{
+    margin-top: -15px;
+}
