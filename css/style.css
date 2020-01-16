@@ -64,6 +64,7 @@ main > p{
 footer{
     padding: 10px;
     background-color: #eaeaea4f;
+    clear: both;
 }
 
 .film-link{

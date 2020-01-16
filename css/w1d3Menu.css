@@ -1,0 +1,18 @@
+.w1d3-menu{
+}
+
+.w1d3-menu ul{
+    margin: 30px 20px;
+    background-color: red;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+}
+
+.w1d3-menu ul li{
+    display: inline;
+    background-color: white;
+    margin: 5px;
+    padding: 10px 5px;
+    border: 1px solid black;
+}

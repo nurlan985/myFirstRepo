@@ -1,0 +1,18 @@
+.layout2-main{
+    background-color: lightgray;
+    width: 500px;
+    margin: 30px;
+    padding: 10px;
+    overflow: hidden;
+}
+.layout2-main h1{
+    background-color: yellow;
+    margin-left: 10px;
+}
+.area1, .area2{
+    background-color: lightblue;
+    float: right;
+    margin-left: 10px;
+    width: 100px;
+}
+
