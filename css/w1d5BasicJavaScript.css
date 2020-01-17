@@ -1,0 +1,12 @@
+.buttons{
+    margin: 20px;
+}
+body>h3{
+    margin-left: 20px;
+}
+#console{
+    margin: 20px;
+    padding: 5px;
+    background-color: lightgray;
+    color: #455aee;
+}
