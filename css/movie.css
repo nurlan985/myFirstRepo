@@ -83,6 +83,8 @@ div.img-overview{
     padding: 10px;
 }
 .comment{
+    display: inline-block;
+    width: -webkit-fill-available;
     overflow: hidden;
     margin-bottom: 20px;
 }
@@ -98,7 +100,6 @@ div.img-overview{
 .comment-text{
     margin-top: 0;
     text-align: left;
-    min-height: 55px;
 }
 .comment-text>img{
     float: left;
