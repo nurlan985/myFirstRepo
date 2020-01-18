@@ -28,8 +28,9 @@ function myFunctionTestArr(val1, val2) {
     if(success) {
         return "TEST SUCCEEDED";
     }
-    console.assert(false, "TEST FAILED. Expected "+val1+" found "+val2);
-    return "TEST FAILED. Expected "+val1+" found "+val2;
+    let mess =  "TEST FAILED. Expected ["+val1+"] found ["+val2+"]";
+    console.assert(false, mess);
+    return mess;
 }
 function myFunctionTest(val1, val2) {
     console.assert(val1===val2, "TEST FAILED. Expected "+val1+" found "+val2);
@@ -119,6 +120,8 @@ function click8() {
     let arr = ["nurlan", "professor", "MUM"];
     let i = 4;
     compareArrVal("filterLongWords(["+arr+"], "+i+")", ["nurlan", "professor"], filterLongWords(arr,i));
+    i = 7;
+    compareArrVal("filterLongWords(["+arr+"], "+i+")", ["nurlan", "professor"], filterLongWords(arr,i));
 }
 
 function multiply10(arr){
@@ -134,6 +137,7 @@ function arrEqual3(arr) {
 function click9b() {
     let arr = [1,3,5,3,3];
     compareArrVal("arrEqual3(["+arr+"])",[3,3,3],arrEqual3(arr));
+    compareArrVal("arrEqual3(["+arr+"])",[3,3],arrEqual3(arr));
 }
 function multiplyReduce(arr) {
     return arr.reduce((e1,e2)=>e1*e2);
