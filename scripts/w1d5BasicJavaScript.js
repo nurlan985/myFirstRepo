@@ -1,44 +1,3 @@
-function log(message) {
-
-    console.log(message);
-    let c = document.getElementById("console");
-    c.innerHTML += "<p>" + message.replace(/</g, "&lt;").replace(/>/g, "&gt;") +"</p>";
-}
-
-function compareArrVal(description, val, result) {
-    log("Expected output of " + description + " is [" + result +"]; "+ myFunctionTestArr(val, result));
-}
-function compareVal(description, val, result) {
-    log("Expected output of " + description + " is " + result +"; "+ myFunctionTest(val, result));
-}
-
-function myFunctionTestArr(val1, val2) {
-    let success = true;
-    if(val1.length!==val2.length){
-        success=false;
-    }
-    if(success) {
-        for (let i = 0; i < val1.length; i++) {
-            if (val1[i] !== val2[i]) {
-                success = false;
-                break;
-            }
-        }
-    }
-    if(success) {
-        return "TEST SUCCEEDED";
-    }
-    let mess =  "TEST FAILED. Expected ["+val1+"] found ["+val2+"]";
-    console.assert(false, mess);
-    return mess;
-}
-function myFunctionTest(val1, val2) {
-    console.assert(val1===val2, "TEST FAILED. Expected "+val1+" found "+val2);
-    if(val1===val2){
-        return "TEST SUCCEEDED";
-    }
-    return "TEST FAILED. Expected "+val1+" found "+val2;
-}
 
 function max(n1, n2) {
     // return (n1>n2)?n1:n2;
@@ -145,4 +104,21 @@ function multiplyReduce(arr) {
 function click9c() {
     let arr = [1,3,5,3,3];
     compareVal("multiplyReduce(["+arr+"])", 135, multiplyReduce(arr));
+}
+
+function runFunctions(){
+    click2();
+    click3();
+    click4();
+    click5();
+    click6();
+    click7();
+    click8();
+    click9a();
+    click9b();
+    click9c();
+}
+
+{
+    window.onload = runFunctions;
 }

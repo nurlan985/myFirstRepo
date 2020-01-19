@@ -21,10 +21,13 @@
 letter country code ">
 
     <div> Let's search Google <input name="q" />
-        <button name="test1" onclick="document = undefined">
+        <button name="test1" id="ok">
             click
         </button>
 
     </div>
+<script>
+    window.onload = ()=>document.getElementById("ok").onclick = ()=>alert("booyah");
+</script>
 </body>
 </html>
