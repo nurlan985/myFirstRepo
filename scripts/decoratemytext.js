@@ -29,8 +29,12 @@ function btnIgpay() {
     let arr = $text.val().split(' ');
     let newArr = [];
     for(let t of arr){
+        if(t.trim().length === 0){
+            newArr.push(t);
+            continue;
+        }
         let count = t.length;
-        while (!isVowel(t[0]) && count>0){
+        while (!isVowel(t[0]) && /[a-zA-Z]/.test(t[0]) && count>0){
             let newT = t.substring(1);
             t = newT+t[0];
             count--;

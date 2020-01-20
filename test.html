@@ -17,9 +17,11 @@
         <option >Newman</option>
     </select>
     Country code:
-    <input type="text" name="country_code" pattern="[+\-_]{2}" title=" Three
+    <form >
+    <input type="text" name="country_code" pattern="/\d+/g" title=" Three
 letter country code ">
-
+    <input type="submit"/>
+    </form>
     <div> Let's search Google <input name="q" />
         <button name="test1" id="ok">
             click
