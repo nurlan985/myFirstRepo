@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 (function() {
     "use strict";
     let isStarted = false;
@@ -13,11 +14,11 @@
         document.getElementById("turbo").onchange = chbxTurboChanged;
         document.getElementById("fontsize").onchange = cbxFontSizeChanged;
 
-    }
+    };
 
     function cbxFontSizeChanged() {
         const textArea = document.getElementById("text-area");
-        let fontSize = "12pt"
+        let fontSize = "12pt";
         switch (document.getElementById("fontsize").value) {
             case "Tiny":
                 fontSize = "7pt";

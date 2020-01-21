@@ -1,0 +1,78 @@
+<!--Author: Nurlan Kustutinov (StudentID: 610696)-->
+<!--
+Dear Professor,
+
+This is my link to animation: https://nurlan985.github.io/ascii.html
+I spent for this assignment about 30 minutes. It was very easy,
+I didn’t use PDF document, I just read speed and Size from pdf file. I used hashmap ANIMATIONS and used .split("=====\n").
+In addition, I used setTimeout and recursion, I didn’t use setInterval.
+
+This is my link to Mocha and map/filter pure functions: https://nurlan985.github.io/w2d1ModifyW1D5Mocha.html
+I spent for this assignment about 2 hours. I was easy. And I studied Mocha and assert form chai. It is very interesting. In this assignment I did my own map (myMap), and filter (myFilter) functions and used these functions in my code. For check my array result I created new function (checkArray) and in this function I check result is array or not, array’s length, and every elements in this array.
+ In addition, I add some special error for check mocha.
+My own functions:
+myMap(arr, mapFunc){
+    let result = [];
+    for(let itm of arr){
+        result.push(mapFunc(itm));
+    }
+    return result;
+},
+myFilter(arr, filterFunc){
+    let result = [];
+    for(let itm of arr) {
+        if(filterFunc(itm)){
+            result.push(itm);
+        }
+    }
+    return result;
+},
+
+Thanks,
+
+Best regards,
+Nurlan Kustutinov
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>W2D2 JS Practice</title>
+    <!-- add mocha css, to show results -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <!-- add mocha framework code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd'); // minimal setup
+    </script>
+    <!-- add chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+
+    <script src="scripts/W2D2JSPractice.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<header>
+    <div class="main_menu" id="headerMenu"></div>
+</header>
+
+<div id="mocha"></div>
+
+<div id="footer"></div>
+
+<!-- run tests! -->
+<script>
+    mocha.run();
+</script>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/my-widgets.js"></script>
+</body>
+</html>
+
