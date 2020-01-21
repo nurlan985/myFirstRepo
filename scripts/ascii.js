@@ -68,8 +68,7 @@
     }
 
     function run() {
-        const textArea = document.getElementById("text-area");
-        textArea.value = animationArr[pos%animationArr.length];
+        document.getElementById("text-area").value = animationArr[pos%animationArr.length];
         pos++;
         if(isStarted){
             setTimeout(run,  speed);

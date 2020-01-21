@@ -2,9 +2,6 @@
     "use strict";
     let assign = {
         array: [],
-        setValues(...vals){
-            this.values = vals;
-        },
 
         myMap(arr, mapFunc){
             let result = [];
@@ -124,7 +121,7 @@
                 assert.equal(assign.findLongestWord(), 9);
             });
             it("ths filterLongWords(5) is [\"nurlan\", \"professor\"]", function () {
-                checkArray( assign.filterLongWords(5), ["nurlan", "professor"]);
+                checkArray(assign.filterLongWords(5), ["nurlan", "professor"]);
             });
         });
         context("when given array [1,3,5,3,3]", function () {
