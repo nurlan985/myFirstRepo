@@ -1,0 +1,45 @@
+<!--Author: Nurlan Kustutinov (StudentID: 610696)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>W2D1 Modify W1D5 to Mocha</title>
+    <!-- add mocha css, to show results -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <!-- add mocha framework code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd'); // minimal setup
+    </script>
+    <!-- add chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+
+    <script src="scripts/w2d1ModifyW1D5Mocha.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/w1d5BasicJavaScript.css">
+
+</head>
+<body>
+<header>
+    <div class="main_menu" id="headerMenu"></div>
+</header>
+
+<div id="mocha"></div>
+
+<div id="footer"></div>
+
+
+<!-- run tests! -->
+<script>
+    mocha.run();
+</script>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/my-widgets.js"></script>
+</body>
+</html>
+
