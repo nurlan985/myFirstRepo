@@ -117,10 +117,10 @@
                 assign.reverseArrayInPlace(arrayValue);
                 assert.isTrue(assign.deepEqual(arrayValue,  [5, 4, 3, 2, 1]));
             });
-            it("the given array arrayValue = [1, 2, 3, 4, 5]. reverseArrayInPlace(arrayValue). arrayValue is [5, 4, 3, 2, 1] (special mistake)", function () {
+            it("the given array arrayValue = [1, 2, 3, 4, 5]. reverseArrayInPlace(arrayValue). arrayValue is [5, 4, 3, 2, 1] (specially made mistake)", function () {
                 let arrayValue = [1, 2, 3, 4, 5];
                 assign.reverseArrayInPlace(arrayValue);
-                assert.isTrue(assign.deepEqual(arrayValue,  [1, 2, 3, 4, 5]), "(special mistake)");
+                assert.isTrue(assign.deepEqual(arrayValue,  [1, 2, 3, 4, 5]), "(specially made mistake)");
             });
         });
         context("A List", function () {

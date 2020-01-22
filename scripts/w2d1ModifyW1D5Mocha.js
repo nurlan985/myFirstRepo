@@ -77,7 +77,7 @@
             it("the maxOfTree(41, 20, 30) is 41", function () {
                 assert.equal(assign.maxOfThree(41, 20,30), 41);
             });
-            it("the maxOfTree(41, 20, 30) is 41 (special mistake)", function () {
+            it("the maxOfTree(41, 20, 30) is 41 (specially made mistake)", function () {
                 assert.equal(assign.maxOfThree(41, 20,30), 20);
             });
         });
@@ -135,7 +135,7 @@
             it("ths arrEqual3() is [3,3,3]", function () {
                 checkArray(assign.arrEqual3(), [3,3,3]);
             });
-            it("ths arrEqual3() is [3,3] (special mistake)", function () {
+            it("ths arrEqual3() is [3,3] (specially made mistake)", function () {
                 checkArray(assign.arrEqual3(), [3,3]);
             });
             it("ths multiplyReduce() is 135", function () {
