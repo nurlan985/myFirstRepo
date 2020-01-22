@@ -18,8 +18,10 @@
     </select>
     Country code:
     <form >
-    <input type="text" name="country_code" pattern="/\d+/g" title=" Three
+    <input type="text" name="country_code" pattern="\.{3}" title=" Three
 letter country code ">
+    <input type="text" name="country_code" pattern="[A-Za-z]{3}" title=" Three
+letter country code 2">
     <input type="submit"/>
     </form>
     <div> Let's search Google <input name="q" />
