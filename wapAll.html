@@ -1,0 +1,519 @@
+<html><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;">INTERNET AND HTTP
+-&gt;What is a TCP port?
+port: a number given to each program or service
+-&gt;What is multiplexing (regarding tcp ports)
+Multiplexing is the process of combining two or more data streams into a single physical connection.
+TCP provides multiplexing facilities by using source and destination port numbers
+-&gt;What is the difference between a browser and a web server? How do they work together?
+The web browser is an application program that displays a www document. It usually uses other internet services to access the document.
+Web server is a program or a computer that can provide services to other programs called clients.
+-&gt;What is DNS?
+The Domain Name System (DNS) is the phonebook of the Internet. Humans access information online through domain names, like nytimes.com or espn.com. Web browsers interact through Internet Protocol (IP) addresses. DNS translates domain names to IP addresses so browsers can load Internet resources.
+-&gt;What are HTTP status codes?
+HTTP status codes are standard response codes given by web site servers on the internet. The codes help identify the cause of the
+problem when a web page or other resource does not load properly. ... HTTP status codes are sometimes called browser error codes or
+internet error codes
+-&gt;What are the different kinds of HTTP messages?
+There are two types of messages: requests sent by the client to trigger an action on the server, and responses, the answer from the server.
+HTML BASICS
+What are the key parts of a URL?
+A URL for HTTP (or HTTPS) is normally made up of three or four components:
+A scheme. The scheme identifies the protocol to be used to access the resource on the Internet. It can be
+HTTP (without SSL) or HTTPS (with SSL).
+A host. The host name identifies the host that holds the resource. For example, www.example.com. A server provides
+services in the name of the host, but hosts and servers do not have a one-to-one mapping. Refer to Host names.
+Host names can also be followed by a port number. Refer to Port numbers. Well-known port numbers for a service are
+normally omitted from the URL. Most servers use the well-known port numbers for HTTP and HTTPS , so most HTTP URLs omit the port number.
+A path. The path identifies the specific resource in the host that the web client wants to access. For example, /software/htp/cics/index.html.
+A query string. If a query string is used, it follows the path component, and provides a string of information that the resource can use for some purpose (for example, as parameters for a search or as data to be processed). The query string is usually a string of name and value pairs; for example, term=bluebird. Name and value pairs are separated from each other by an ampersand (&amp;); for example, term=bluebird&amp;source=browser-search.
+-&gt;How is DNS involved in a URL?
+The DNS process takes the human readable URL of ‘https://www.google.com’ and translates it into machine readable numbers called an IP address.
+-&gt;What are anchor, ports, and query strings in URLs?
+Anchor: jumps to a given section of a web page
+Port: for web servers on ports other than the default 80Query string: a set of parameters passed to a web program-&gt;How is HTTP related to HTML?
+We used HTTP protocol to request web page from server , this page based on HTML
+-&gt;Write the most basic HTML5 web page
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"/&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Page contents
+&lt;/body&gt;
+&lt;/html&gt;
+-&gt;What is the difference between a relative and absolute url?
+Relative URL is related to the same domain (most cases different files in same domain), absolute will be full URL and can any other domains
+-&gt; What does it mean if a URL starts with a / ? with a file name? with a .. ?
+/ means a folder in the same directory
+filename means another file in the same directory
+.. mean go back up one time only to the parent directory
+MORE HTML
+-&gt;What is the difference betweeen block level and in-line elements?
+A block-level element always starts on a new line and takes up the full width available
+An inline element does not start on a new line and only takes up as much width as necessary
+-&gt;Write HTML for an unordered list, ordered list, table
+unordered list &lt;ul&gt;.... &lt;/ul&gt;
+ordered list &lt;ol&gt;....&lt;/ol&gt;
+table &lt;table&gt;....&lt;/table&gt;
+
+
+SEPARATION OF CONCERNS
+1 What is the principle of keeping content separate from presentation, and what are its advantages?
+-Seperating content (HTML) from presentation (CSS) and make styles in a CSS file , gives us easy way to maintain each file and reusability for CSS
+2 What are the 3 ways of adding style information to an HTML page?
+-inline style attribute , &lt;style&gt; tag , reference to CSS file 
+3 What is the format of a CSS style rule?  Give an example.
+selector 
+{
+attribute : value;
+}
+for example :
+p {color:red;}
+FONT, TEXT, BACKGROUND
+4 How do you set a font type?
+font-family 
+5 What are CSS generic fonts and how are they recommended to be used?
+The font-family property should hold several font names as a "fallback" system, to ensure maximum compatibility between browsers/operating systems. If the browser does not support the first font, it tries the next font.
+font-family: "Times New Roman", Times, serif;
+6 What is the difference between px, pt, and em?
+px: pixles depend on screen 
+pt: points 1-72
+em:  scalable unit depend on current font size
+7 What is the text-decoration property?
+CSS property sets the appearance of decorative lines on text
+8 When should you use an &lt;img&gt; versus a background-image?
+&lt;img&gt; to display image as a content ,
+background-image is an attribute to make a backgrount for an element and this background is an image
+INHERITANCE AND CASCADING
+9 Give an example of a property that is not inherited and why it is not inherited.
+border , value will be none .
+10 What does 'cascading' mean in CSS?
+"Cascading" means that styles can fall (or cascade) from one style sheet to another, enabling multiple style sheets to be used on one HTML document.
+11 Why are classes higher scoring than HTML elements and IDs higher than classes?
+class has a degree of 10 , id has a degree of 100 in hirarchy , element has a degree of 1 
+https://designshack.net/articles/css/what-the-heck-is-css-specificity/
+SELECTORS
+12 What are the HTML class and id attributes?
+class is an attribute for HTML element can has none or multiple class ,
+id is an attribute that has one value , we should avoid repeat this value for other HTML element (ID shoul be unique)
+13 Create a jsfiddle that makes hyperlinks yellow after they are visited.
+A:visited{color:yellow;}
+14 What is the difference between div and span?  How does a browser normally align divs and spans?
+div is a block level element , span is an in-line element 
+15 How are divs related to the HTML5 page section tags?
+div and section are block level element 
+16 What are the two CSS context selector syntaxes?  Give examples of each.
+selector1 selector2 { properties } Applies the given properties to selector2 only if it is inside a selector1 on the page
+selector1 &gt; selector2 { properties } Applies the given properties to selector2 only if it is direct child of selector1 (in the DOM)
+17 What is an id selector?
+selecting element by ID for CSS using #
+18 What is a class selector?
+selecting element by class for CSS using .
+19 What is a type selector?
+selecting element by tag for CSS using tag name
+20 Give an example of grouping type selectors.
+p, h1, div
+21 Give an example of a type selector with a class selector.
+p.awesome
+22 Give an example of a selector that finds all h1 elements that have a class of 'important'
+h1.important{...}
+
+
+BOX MODEL
+1 What is the difference of padding and margin in the box model?
+padding deals with the inner space, margin deals with the outer space to the next outer element. Padding is space inside the border, whereas Margin is space outside the border.
+2 What do the standard width and height measure in the box model?
+width = content width + L/R padding + L/R border + L/R margin
+height = content height + T/B padding + T/B border + T/B margin
+3 What is margin collapse?
+Vertical margins on different elements that touch each other (thus have no
+content, padding, or borders separating them) will collapse, forming a single
+margin that is equal to the greater of the adjoining margins.
+1. Collapsing Margins Between Adjacent Elements
+2. Collapsing Margins Between Parent and Child Elements
+
+
+BLOCK VS INLINE ELEMENT LAYOUT
+4 How can you center a block element using auto margin?
+margin:auto;
+5 Which size and margin properties are used by the browser for inline boxes?
+For inline elements only the left and right margin and padding affect surrounding elements.
+6 What does the text-align property do for inline and block elements?
+text-align describes how inline element is aligned in its parent block element. 
+text-align does not align block elements within the page.
+7 What does the vertical-align property do?
+Specifies where an inline element should be aligned vertically, with respect to other content on the same line within its block element's box
+
+8 What is the difference of inline versus inline-block display?
+inline-block elements are like inline elements but they can have a width and height.
+
+
+POSITION
+9 Explain the 4 position property values and their differences.
+Static position flows box elements from top to bottom, and inline elements from left to right. 
+Relative position keeps the space in the original flow but displays the element at an offset. 
+Absolute position takes the element out of the flow and places it relative to the "containing element". 
+Fixed position takes the element out of the flow and places it relative to the viewport.
+
+FLOAT
+10 What are the values of the float property and how do they affect the alignment of elements on the page?
+The CSS float property makes its element move to right or left side of the containing box
+float: left , float:right
+11 How does the clear property interact with float?
+The clear property moves its element downwards if there is a floating element on the specified side
+12 How does the overflow property interact with float?
+if Floating elements that are too tall for containing block , we can use overflow  to hide extra content.
+13 What does the column-count property do?
+browser splits one div to  columns rather than split into smaller divs ourselves.
+14 When should you use alignment versus float versus position for laying out elements on a page?
+1. if possible, lay out an element by aligning its content
+• horizontal alignment: text-align
+• set this on a block element; it aligns the content (text and inline elements) within it (not the block
+element itself)
+• E.g., see lesson3_examples/textalign.html example
+• Might need to make block elements have display: inline
+• vertical alignment: vertical-align
+• set this on an inline element, and it aligns it vertically within its containing element
+2. if alignment won't work, try floating the element
+3. if floating won't work, try positioning the element
+• absolute/fixed positioning are a last resort and should not be overused
+4. OR, use flexbox or grid instead of float and positioning
+
+
+RESPONSIVE DESIGN
+1. Write a media query that will set the background color to black and text to white for any screen smaller than 480px
+@media screen and (max-width:480px) {
+*{
+background-color:black;
+color:white;
+}
+}
+
+2. How is the CSS display property involved in flexbox?
+.container {display:flex;}
+3. How is the css display property involved in CSS grid?
+.container {display:grid;}
+
+4. Use CSS grid to create a web page layout with header, 3 equal columns and a footer.  Do the same using named grid-template-areas
+5. Why don't you have to write any css rules for the bootstrap carousel example?
+bootstrap has many classes and CSS , we just assign classes to our elements and bootstrap will affect these elements.
+
+
+
+-&gt;What is a form input parameter?
+
+  An input parameter from a form is the name part of the name/value pair that is submitted for each input element in a form
+
+-&gt;What is the difference of get and post methods?
+Main difference between POST and GET method is that GET is intended to be idempotent and just retrieve a value (or values) whereas 
+POST is intended for queries that submit information to be stored on the website in a non-idempotent manner.  In addition,
+POST sends input parameters in the body of the message versus GET sends them as part of the url.
+
+-&gt;What does the action attribute of form specify?
+specifies the target URL for the website that the request will be submitted to
+
+-&gt;What does the method attribute of form specify?
+specifies the type of request, generally GET of POST
+
+-&gt;Why is the name attribute important on an input element?
+it will be the key to refer to value that will be sent through the request
+
+-&gt;What does the checked attribute do on a checkbox element?
+it will make the checked item be true and have the checkbox marked with an X
+
+-&gt;What does the multiple attribute do on a select element?
+Allow selecting multiple elements
+
+-&gt;What does the browser do when an input element of type submit is clicked?
+It will submit the form data to the target (action) URL by (method) type
+
+-&gt;What happens if the submit button is not inside of a form?
+No form is submitted.
+
+-&gt;What is the meaning of the following CSS selector pattern?  element[attribute="value"]
+ This will apply the CSS rule to all elements that have "attribute" equal to "value"
+
+-&gt;What does the browser do with the pattern attribute in an input element?
+It will try to match the pattern value with value of this input according to regular expression rules
+
+-&gt;The regular expression 'abc' is supposed to match 'abcdef', but will not match in the pattern attribute of a 
+text element. Why?
+'abc' as a pattern will not match  'abcdef' because it should has 'abc' only.  In HTML forms there are implicit anchors 
+^ and $ that require the pattern to match the beginning and end of the target string.
+
+Write a regular expression to check for a pattern containing 1 or more word characters followed by '@' followed 
+by 1 or more word characters.
+[a-zA-Z_0-9]+\@[a-zA-Z_0-9]+  OR w+\@w+
+
+
+w1d5 JSintro
+07/26/2019kl
+
+JAVASCRIPT LANGUAGE
+1.	What are the 8 JavaScript types?
+A:  slide 11:  "number, boolean, string, object (array, function), null undefined
+
+2.	What does it mean to be ‘loosely typed’?
+A:  You do not assign types to JS variables, but there are data types.  A variable can hold any data type.
+(slide 11:  "types are not specified, but JS does have types ('loosely typed')"
+
+3.	In what sense is JavaScript lightweight?
+A:  JavaScript is a very small language in terms of the size of it's code.  It runs in a browser and browsers do not want to contain a large amount
+of memory for its scripting language.  Also, the code that gets executed is sent around with web pages and those have to be relatively 
+small so they can be efficiently sent over the Internet.
+
+4.	What is the difference of 'var' and 'let' and ‘const’?
+A:  var is function scope.  let and const are block scope.  var is historical/legacy.  should always now use let and const
+
+5.	When should var be used instead of let?
+A:  never.  only in legacy code.
+
+6.	When should const be used instead of let?
+A:  let should be used if you need to assign a  new value to the variable.  Otherwise use const.
+
+7.	What is the difference of == and ===?  Which should be used and why?
+A:  == does automatic type conversion, which is rarely what programmers want.  It is a bad part of JS design.  We should always use 
+strict equality operators, ===
+
+8.	What is 2 + "2"?  What is "2" + 2?  2 + 2?
+A:  "22"  "22"  4
+
+9.	How can you convert from a string to an int or float?
+A: const n1 = parseInt("42"); // 42 
+const n2 = parseFloat("555"); 
+
+10.	What values are falsey?  What values are truthy?
+A:  "falsey" values: false, 0, 0.0, NaN, empty String(""), null, and undefined 
+"truthy" values: anything else, include objects
+
+11.	What is the value of !!0 and why?
+A: false, because 0 is 'falsey' and !0 is therefore true and !true is false
+
+12.	What is the difference of null and undefined?
+A:  undefined&nbsp;: has been declared, but no value assigned.  A variable will be null if it was declared and then assigned the special value null 
+
+13.	What is the difference of a variable with value undefined and a reference error?  (Demonstrate each to yourself in the console and paste the results in your answer.)
+A: reference error when try to reference a variable that has not been declared (and therefore has value undefined)--e.g., myArray.length before myArray has been declared.
+
+14.	When is it useful to use a conditional expression like " if (!x) ... " ?
+A: slide 21  //initialize a variable if not set yet
+if (!a) { a = 10;}
+
+15.	When is it useful to use a conditional expression like " if (x) ... " ?
+A: //only use a variable if it has a value
+if (b) {  console.log(b);  }
+
+16.	Give 2 ways to initialize an array with 'a' 'b' 'c' .
+const myArray = ['a', 'b', 'c'];
+const myArray = [];  myArray[0] = 'a'; ... 
+
+17.	What operations will operate an array like a stack?  like a queue?
+stack:  push and pop,  queue:  push and shift
+
+18.	What are map, filter, reduce ?  Why are they recommended over for loops?
+A: see slide 26 for definitions/examples.  They are preferred over for loops because they avoid common bugs associated with end conditions
+
+19.	Modify the jsfiddle on the map/filter/reduce slide as follows: 
+a) multiply each element by 10;  
+b) return array with all elements equal to 3;  
+c) return the product of all elements; 
+
+20.	What is the difference of a function declaration and function expression?
+A:  Basically,  a function expression is same syntax as a declaration, just used where an expression is expected (‘lhs’ vs ‘rhs’)
+Also, function expressions can be anonymous (or named).  Declarations must be named and can be used before they appear in a file.
+
+21.	why favor K&amp;R style {} in JavaScript?
+A:  it avoids problems that can arise with automatic semicolon insertion in JavaScript
+
+EVENT DRIVEN
+22.	What is the DOM?  How does it relate to HTML?  How does it relate to JavaScript?
+A:  Document Object Model.  This is the name of the JavaScript data structure that browsers use to model the HTML in an HTML page
+
+23.	What does document.getElementById("abc") do?
+A: returns the element from the DOM that has id = "abc"
+
+- innerHTML is a property of what kind of element?  What does it contain as its value?
+A:  any element that can have a start and end tag.  (i.e., not &lt;input&gt;)  
+It's value will be the content between the start and end tag.  It can contain text and also more HTML.
+
+- What is innerHTML hacking and why is it bad style?
+A:  inserting new HTML into the DOM using the innerHTML attribute.  Bad style because it violates separation of 
+concerns -- HTML mixed into the JavaScript.  Also it can become difficult to write correct HTML and debug as an attribute value.
+
+- Good style allows what to be assigned to innerHTML?
+A:  only text, no HTML
+
+- what is the style property for a DOM element?  Is it an object?  What does it have for properties?
+A:  yes it is an object.  It has properties that correspond to all of the CSS style properties
+
+- what is unobtrusive styling with respect to JavaScript code?
+A:  Do not set any style information in your JavaScript using the DOM style property.  Instead, set classes in JavaScript, and then 
+the stylesheet should have settings to style the classes.
+
+
+W1D6 Review questions  
+
+- what are the 6 global objects available to every JavaScript program (in a browser)
+A: window, document, history, location, navigator, screen
+
+- which one holds the other 5 as properties
+A: window
+
+- how is document related to the DOM
+A:  document is the name of the browser global that contains the DOM;  i.e., document is the DOM
+
+- where are event handlers attached with unobtrusive JavaScript?
+A:  when the page loads
+
+- give an example of a problem that could arise from obtrusive JavaScript.
+A:  if you have a script file in the head that refers to some element in the body, the head code might fail
+because the body will not be loaded when the head code runs.  Also have issue of JavaScript in HTML and lack of 
+separation of concerns.  This makes it more difficult to debug and modify JavaScript (and HTML) code if they 
+are interleaved.
+
+- when does JavaScript code run?
+A:  when it is loaded by the browser.  I.e., as soon as the browser reads each line.
+
+- what will happen if you call a function to attach an event handler in the head of the page?
+A: The event handler will not find the DOM element because the head is loaded before the body. 
+
+- when does the window.onload event run?
+A:  when the page is done loading.
+
+- is window.onload a property or a method or both?
+A: both.  It is a property that holds a function.  This function gets called by the browser when the page has finished loading.
+
+- what is the difference of:
+   * okButton.onclick = okayClick();
+   * okButton.onclick = okayClick;
+A:  in the first line the onclick property is assigned the value that is returned by calling the function okayClick.
+In the second the function itself is assigned to the onclick property.
+   
+- innerHTML is a property of what kind of element?  What does it contain as its value?
+A:  any element that can have a start and end tag.  (i.e., not &lt;input&gt;)  
+It's value will be the content between the start and end tag.  It can contain text and also more HTML.
+
+- What is innerHTML hacking and why is it bad style?
+A:  inserting new HTML into the DOM using the innerHTML attribute.  Bad style because it violates separation of 
+concerns -- HTML mixed into the JavaScript.  Also it can become difficult to write correct HTML and debug as an attribute value.
+
+- Good style allows what to be assigned to innerHTML?
+A:  only text, no HTML
+
+- what is the style property for a DOM element?  Is it an object?  What does it have for properties?
+A:  yes it is an object.  It has properties that correspond to all of the CSS style properties
+
+- what is unobtrusive styling with respect to JavaScript code?
+A:  Do not set any style information in your JavaScript using the DOM style property.  Instead, set classes in JavaScript, and then 
+the stylesheet should have settings to style the classes.
+
+OVERLOADING, FUNCTION PARAMETERS, ARROW FUNCTIONS, MAP/FILTER/REDUCE and LOOPING
+
+What is overloading and how does it work in Java and JavaScript?
+Overloading is making methods/functions having the same name; but different input. In Java, methods are overloaded by making the type and number of input (or signature) differentiated. In JavaScript, function overloading does not worked. Dyanamic typing of variables prohibits functions signatures from being unique. Moreover, functions in JavaScript can take either less(even zero) or more than specified in their parameter list; all so with out the compiler flagging an error.
+
+What is the arguments object and how does it relate to the rest parameter?
+The arguments object is what Javascript associate with arguments of a given function. This is an array structure that conveniently gathers a given set of arguments passed to a function and is accessible with in the function body.  
+
+How does the rest parameter relate to the spread operator?
+They are the same syntactical constructs. rest parameter helps capture optional parameters of unknown size as part of invoked function arguments. The spread operator (when preceding an array variable) changes the elements to their redumentary formed variables.
+
+How does the arrow function notation relate to an anonymous function expression?
+They are both function expressions. They constitute function definitions with no name. One subtle difference between them is the way they handle 'this' variable in enclosing context.
+
+What is the difference of 'for in' and 'for of' ?
+'for in' is a loop structure used to look and access properties of objects; where each iteration holds a different identifier(key) of each property in the iterated object. The 'for of' look construct in which each iteration assigns the value of the property, instead. 
+
+What is the difference of array.forEach and array.map?
+Both functions take a function of single argument that denotes each element of the calling array. In case of forEach, the function usually does o  peration to each element with no side effect (for instance printing each element to console) and return nothing. In the case of map, the argument function performs some transformation over each element of the array; after which same-length transformed array is returned as output. 
+
+Could you use array.forEach to filter an array instead of array.filter?  Should you?
+Yes. but so when the desired logic of processing dictates that a resultant array be not returned; which is the case in the latter but not the former. 
+
+
+- what is the difference of setTimeout and setInterval?
+A: SetInterval repeats
+
+- what do they return?
+A:  both&nbsp;setTimeout&nbsp;and&nbsp;setInterval&nbsp;return an ID representing the timer
+this ID can be passed to&nbsp;clearTimeout/Interval&nbsp;later to stop the timer
+
+- what is strict mode?
+A: writing&nbsp;"use strict";&nbsp;at the very top of your JS file turns on strict syntax checking:
+shows an error if you try to assign to an undeclared variable
+stops you from overwriting key JS system libraries
+forbids some unsafe or error-prone language features
+
+Scope Lesson  
+Last update:  1/5/2020
+
+Review Questions
+
+
+GLOBAL, FUNCTION, BLOCK SCOPE
+
+What is an implied global and how is it created?  Are these allowed when "use 
+strict" is in effect?
+Implied global variables are created when assigning a variable some value 
+with out first declaring it in a block. This binds the variable with the 
+global 'window' variable. When 'use strict' is in effect, the compiler 
+signals an reference error.
+
+What is the difference of block scope and functional scope?  Which does Java 
+support?  Which does JavaScript support?
+Block scope denotes that variables declared with in a block are visible with 
+in there. Functional block means that variables declared anywhere(even nested 
+with in other block) in a function all assume visibility (therefore, 
+accessibility) through all parts of the function. Java supports block scope 
+but JavaScript supports block scope with its 'let' and 'const' as well as 
+function scope with its 'var' variable declarations. 
+
+What is best practice for const, let, and var?
+Always try to use 'const', then 'let'. But never use 'var' in new JavaScript 
+code. 
+
+What is the difference between const and let?
+variables declared with 'const' cannot have their values reassigned in the same block; which is the case with variables declared with 
+'let'.
+
+What is the difference between let and var?
+variable declared with 'let' has block scope; where as variable declared with 
+'var' assumes functional block. 
+
+HOISTING
+What are the 2 phases of JavaScripe code execution?
+1) all variable and function declarations are located and remembered for that body of code (hoisted)
+2) the body of code is executed line by line
+
+How does hoisting work with variable declarations?  with function 
+declarations?  with function expressions?
+variable declarations (with 'var') and function declarations are hoisted; but 
+not function expressions.  variable declarations are assigned 'undefined' as their value.  function declarations have the value of the function code.
+
+EXECUTION CONTEXT AND SCOPE CHAIN
+What is the scope chain?  
+the chain or linked list of execution contexts on the runtime stack of function calls 
+
+What is an execution context?
+execution context is a frame on the runtime stack of function calls.  It contains the local variable bindings for the function and a reference to 
+its enclosing lexical environment.  The tree of execution contexts formed for a given execution context is called the lexical environment.
+
+CLOSURE
+What is a closure?  What is a free variable?
+closure: A first class function that binds to free variables that are defined 
+in its lexical execution environment.  
+Free variable is a variable not defined locally or as a parameter 
+of a function but used from the enclosing context. 
+
+What does it mean for a closure to have a reference to a free variable?
+The closure has a reference to the variable (i.e., the address of the variable location).  If the variable has its value changed by any other code that value will be what the closure sees.
+
+Why are closures often used with callback functions?
+Callback functions normally only are given by name.  There are no explicit arguments and parameters given with them.  Closures are a mechanism 
+to associate some state information with the callback function that can be accessed at a later time when the callback function is called.
+
+
+
+</pre></body></html>
