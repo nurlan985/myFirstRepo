@@ -142,6 +142,5 @@
                 assert.equal(assign.multiplyReduce(), 135);
             });
         });
-
     });
 }());

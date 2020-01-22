@@ -1,32 +1,33 @@
 <!--Author: Nurlan Kustutinov (StudentID: 610696)-->
 <!--
 Dear Professor,
+This is my like: https://nurlan985.github.io/W2D2JSPractice.html
+I spent about 2 hours for this assignment. This assignment was very interesting. I love like these assignments (for logic).
 
-This is my link to animation: https://nurlan985.github.io/ascii.html
-I spent for this assignment about 30 minutes. It was very easy,
-I didn’t use PDF document, I just read speed and Size from pdf file. I used hashmap ANIMATIONS and used .split("=====\n").
-In addition, I used setTimeout and recursion, I didn’t use setInterval.
+reverseArray(array)
+For this function I just create new array and add elements from array(took from the end)
 
-This is my link to Mocha and map/filter pure functions: https://nurlan985.github.io/w2d1ModifyW1D5Mocha.html
-I spent for this assignment about 2 hours. I was easy. And I studied Mocha and assert form chai. It is very interesting. In this assignment I did my own map (myMap), and filter (myFilter) functions and used these functions in my code. For check my array result I created new function (checkArray) and in this function I check result is array or not, array’s length, and every elements in this array.
- In addition, I add some special error for check mocha.
-My own functions:
-myMap(arr, mapFunc){
-    let result = [];
-    for(let itm of arr){
-        result.push(mapFunc(itm));
-    }
-    return result;
-},
-myFilter(arr, filterFunc){
-    let result = [];
-    for(let itm of arr) {
-        if(filterFunc(itm)){
-            result.push(itm);
-        }
-    }
-    return result;
-},
+reverseArrayInPlace(array)
+For this function I create sub function expression. swap(i) which do swap from element from i, if i is 0 it's mean swap first and last element. And Id just do for loop until middle array.
+
+arrayToList(array)
+For this function I did with for loop. I took from the end array and create new element and add for rest previous element
+
+listToArray(list)
+For this function I used while and in while I add values to array until item is null.
+
+prepend(val, list)
+this function is easy, I just create new element and add list to newElement's rest.
+
+nth(list, inx)
+for this function I used while and local parameter pos. until pos less then index(from argument) and curentItem is not null. after that I just return currentItem(if currentItem is null I return undefined)
+
+nthRecursive(list, inx)
+also I did this function by recursive. Before I check list and index, if list is null or index is less then zero I return undefined. After I check index if it is zero I return value, else I call this function again with list.rest, and index-1
+
+deepEqual(obj1, obj2)
+this function very cool. I like this function. I did this function also by recursive. If it is object I check every property from object by this function (deepEqual). I used this function for unit test. and also checked this function by unit test assert.isTrue()
+
 
 Thanks,
 
@@ -52,7 +53,12 @@ Nurlan Kustutinov
         // chai has a lot of stuff, let's make assert global
         let assert = chai.assert;
     </script>
-
+<style>
+    #mocha-stats {
+        top: 260px;
+        position: absolute;
+    }
+</style>
     <script src="scripts/W2D2JSPractice.js"></script>
     <link rel="stylesheet" href="css/style.css">
 
