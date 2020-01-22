@@ -97,7 +97,7 @@
                     return false;
                 }
                 for (let k of keys1) {
-                    if (!this.deepEqual(obj1[k], obj2[k])) {
+                    if (!keys2.includes(k) || !this.deepEqual(obj1[k], obj2[k])) {
                         return false;
                     }
                 }
@@ -154,6 +154,10 @@
             it("the given obj = {here: {is: \"an\"}, object: 2} deepEqual(obj,{here: {is: \"an\"}, object: 2}) is true", function () {
                 let obj = {here: {is: "an"}, object: 2};
                 assert.isTrue(assign.deepEqual(obj,{here: {is: "an"}, object: 2}));
+            });
+            it("the given obj = {here: {is: \"an\"}, object: 2} deepEqual(obj,{here: {is: \"an\"}, object: 2}) is true", function () {
+                let obj = {here: {is: "an"}, object: 2};
+                assert.isTrue(assign.deepEqual({here: {is: "an"}, object: 2, a: undefined},{here: {is: "an"}, object: 2, b:undefined}));
             });
         });
     });
