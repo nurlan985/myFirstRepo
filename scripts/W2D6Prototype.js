@@ -75,7 +75,7 @@
                 me.initialize("John", 25);
                 assert.equal(me.learn("Inheritance"),  "John just learned Inheritance");
             });
-            it("teacher.teach(\"WAP\") is [-2, 0, 1, 3, 4, 6]", function () {
+            it("teacher.teach(\"WAP\") is \"Keith Levi is now teaching WAP\"", function () {
                 const teacher = new Teacher();
                 teacher.initialize("Keith Levi", 40);
                 assert.equal(teacher.teach("WAP"),  "Keith Levi is now teaching WAP");
