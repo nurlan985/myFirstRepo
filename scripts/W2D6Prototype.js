@@ -69,7 +69,7 @@
                 assert.deepEqual([6,4,0, 3,-2,1].bubbleSort(),  [-2, 0, 1, 3, 4, 6]);
             });
         });
-        context("Exercise 2", function () {
+        context("Exercise 3", function () {
             it("me.learn(\"Inheritance\") is \"John just learned Inheritance\"", function () {
                 const me = new Student();
                 me.initialize("John", 25);
