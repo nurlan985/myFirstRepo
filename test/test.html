@@ -3,6 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        div{
+            color: red;
+            font-weight: bold
+        }
+    </style>
+    <script>
+        debugger;
+        let n = "nurlan";
+        let x = {
+            n: "solomon",
+            m: function() {
+                (function() {
+
+
+                    console.log(this.n);
+                })();
+            }
+        };
+        x.m()
+    </script>
 </head>
 <body>
     <input type="checkbox" name="condiment" value="d1" /> Lettuce
@@ -18,7 +39,7 @@
     </select>
     Country code:
     <form >
-    <input type="text" name="country_code" pattern="\.{3}" title=" Three
+    <input type="text" name="country_code" pattern="https?://.+" title=" Three
 letter country code ">
     <input type="text" name="country_code" pattern="[A-Za-z]{3}" title=" Three
 letter country code 2">

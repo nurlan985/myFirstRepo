@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            border: 1px solid black;
+        }
+        #a{
+            position: relative;
+            width: 1000px;
+            height: 500px;
+        }
+        #b{
+            position: static;
+            margin: 100px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+        }
+        #c{
+            float: none;
+            position: absolute;
+            left: 50%;
+            bottom: 250px;
+        }
+        #d{
+            position: absolute;
+            /*top: 250px;*/
+            /*left: 250px;*/
+        }
+    </style>
+</head>
+<body>
+<div id="a">Text for a
+    <div id="b">Text for b
+        <div id="c">Text for c</div>
+    </div>
+    <div id="d">Text for d</div>
+</div>
+</body>
+</html>

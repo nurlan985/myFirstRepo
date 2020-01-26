@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test 19</title>
+    <style>
+        #div1 { background-color: lightblue; width: 200px; height: 100px; padding: 10px; border: 5px solid navy; margin: 30px 0 20px; }
+        #div2 { background-color: yellow; width: 200px; height: 100px; padding: 10px 5px 8px; border: 5px solid red; margin: 30px 10px 15px 5px; box-sizing: border-box; }
+        #div3{
+            border: 1px solid red;
+        }
+
+        /*em#recent.awesome { color: orange; }*/
+        /*aside { color: gray; }*/
+        /*p { color: green; }*/
+        /*em { color: yellow; }*/
+        /*.awesome { color: blue; }*/
+        /*em.awesome { color: red; }*/
+        /*#recent { color: black; }*/
+        em{
+            color: red;
+        }
+        #testInh{
+            color: #00b249;
+        }
+        div>div>div>div>div>div>div>div>div>div>div>div {
+            color: #00b249;
+        }
+        .test-more-div{
+            color: red;
+        }
+    </style>
+    <script>
+        x = 1;
+        var a = 5;
+        var b = 10;
+        var c = function(a, b, c) {
+            console.log("x1: "+ x);
+            console.log("a2: "+ a);
+            var f = function() {
+                b = a;
+                console.log("b3: " + b);
+                b = c;
+                var a = 3;
+            }
+            f();
+            console.log("b4: " + b);
+            x = 6;
+        }
+        c(8, 9, 7);
+        console.log("b5: " + b);
+        console.log("x6: "+ x);
+    </script>
+</head>
+<body>
+<div id="div3">
+    <div id="div1">Lorem ipsum dolor sit amet.</div>
+    <div id="div2">Lorem ipsum dolor sit amet.</div>
+</div>
+
+<aside>
+    <p id="testInh"><em id="recent" class="awesome">Which awesome color?</em></p>
+</aside>
+<div><div><div><div><div><div><div><div><div><div><div><div class="test-more-div"><div>test more div</div></div></div></div></div></div></div></div></div></div></div></div></div>
+</body>
+</html>
