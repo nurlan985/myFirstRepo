@@ -4,29 +4,55 @@
             <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item dropdown"><a class="nav-link" href="javascript:void(0)">Assignments</a>
                 <div class="dropdown-content">
-                    <a class="nav-item" href="about-me.html">About me</a>
-                    <a class="nav-item" target="_blank" href="pie.html">Pie recipe</a>
-                    <a class="nav-item" href="W1D3a.html">W1D3 exercise 1. Float boxes</a>
-                    <a class="nav-item" href="W1D3b.html">W1D3 exercise 2 Menu</a>
-                    <a class="nav-item" href="W1D3c.html">W1D3 exercise 3 Layout2</a>
-                    <a class="nav-item" href="W1D3d.html">W1D3 exercise 4 More Floats</a>
-                    <a class="nav-item" target="_blank" href="tmnt.html">TMNT - Rancid Tomatoes</a>
-                    <a class="nav-item" target="_blank" href="w1d4-float.html">W1D4a Responsive Layout - float</a>
-                    <a class="nav-item" target="_blank" href="w1d4-flexbox.html">W1D4a Responsive Layout - flexbox</a>
-                    <a class="nav-item" target="_blank" href="w1d4-grid.html">W1D4a Responsive Layout - grid</a>
-<!--                    <a class="nav-item" target="_blank" href="w1d4-bootstrap.html">W1D4a Responsive Layout - bootstrap</a>-->
-                    <a class="nav-item" target="_blank" href="task.html">W1D4a tasks</a>
-                    <a class="nav-item" href="w1d5BasicJavaScript.html">W1D5 Basic JavaScript</a>
-                    <a class="nav-item" href="w1d6JavaScript.html">W1D6 JavaScript</a>
-                    <a class="nav-item" target="_blank" href="decoratemytext.html">W1D6 Decorate</a>
-                    <a class="nav-item" target="_blank" href="ascii.html">W2D1 Animation</a>
-                    <a class="nav-item" href="w2d1ModifyW1D5Mocha.html">W2D1 Modify W1D5 to Mocha</a>
-                    <a class="nav-item" href="W2D2JSPractice.html">W2D2 JS Practice</a>
-                    <a class="nav-item" href="W2D6-prototype.html">W2D6 Prototype</a>
-                    <a class="nav-item" href="W3D1Clock.html">W3D1 Clock</a>
-                    <a class="nav-item" href="W3D1Account.html">W3D1 Account</a>
+                    <a class="test" tabindex="-1" href="#">Week 1<span class="caret"></span></a>
+                    <ul class="dropdown-menu" style="display: none;">
+                        <li>
+                            <a class="nav-item" href="about-me.html">About me</a>
+                            <a class="nav-item" target="_blank" href="pie.html">Pie recipe</a>
+                            <a class="nav-item" href="W1D3a.html">W1D3 exercise 1. Float boxes</a>
+                            <a class="nav-item" href="W1D3b.html">W1D3 exercise 2 Menu</a>
+                            <a class="nav-item" href="W1D3c.html">W1D3 exercise 3 Layout2</a>
+                            <a class="nav-item" href="W1D3d.html">W1D3 exercise 4 More Floats</a>
+                            <a class="nav-item" target="_blank" href="tmnt.html">TMNT - Rancid Tomatoes</a>
+                            <a class="nav-item" target="_blank" href="w1d4-float.html">W1D4a Responsive Layout - float</a>
+                            <a class="nav-item" target="_blank" href="w1d4-flexbox.html">W1D4a Responsive Layout - flexbox</a>
+                            <a class="nav-item" target="_blank" href="w1d4-grid.html">W1D4a Responsive Layout - grid</a>
+        <!--                    <a class="nav-item" target="_blank" href="w1d4-bootstrap.html">W1D4a Responsive Layout - bootstrap</a>-->
+                            <a class="nav-item" target="_blank" href="task.html">W1D4a tasks</a>
+                            <a class="nav-item" href="w1d5BasicJavaScript.html">W1D5 Basic JavaScript</a>
+                            <a class="nav-item" href="w1d6JavaScript.html">W1D6 JavaScript</a>
+                            <a class="nav-item" target="_blank" href="decoratemytext.html">W1D6 Decorate</a>
+                        </li>
+                    </ul>
+                    <a class="test" tabindex="-1" href="#">Week 2<span class="caret"></span></a>
+                    <ul class="dropdown-menu" style="display: none;">
+                        <li>
+                            <a class="nav-item" target="_blank" href="ascii.html">W2D1 Animation</a>
+                            <a class="nav-item" href="w2d1ModifyW1D5Mocha.html">W2D1 Modify W1D5 to Mocha</a>
+                            <a class="nav-item" href="W2D2JSPractice.html">W2D2 JS Practice</a>
+                            <a class="nav-item" href="W2D6-prototype.html">W2D6 Prototype</a>
+                        </li>
+                    </ul>
+                    <a class="test" tabindex="-1" href="#">Week 3<span class="caret"></span></a>
+                    <ul class="dropdown-menu" style="display: none;">
+                        <li>
+                            <a class="nav-item" href="W3D1Clock.html">W3D1 Clock</a>
+                            <a class="nav-item" href="W3D1Account.html">W3D1 Account</a>
+                            <a class="nav-item" href="W3D2-maze.html">W3D2 Maze</a>
+                        </li>
+                    </ul>
                 </div>
             </li>
 <!--            <li class="nav-item"><a class="nav-link" href="CV.html">Resume(CV)</a></li>-->
         </ul>
     </nav>
+
+    <script>
+        $(document).ready(function(){
+            $('.dropdown-content a.test').on("click", function(e){
+                $(this).next('ul').toggle();
+                e.stopPropagation();
+                e.preventDefault();
+            });
+        });
+    </script>

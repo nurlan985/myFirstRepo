@@ -1,0 +1,78 @@
+<!--Author: Nurlan Kustutinov (StudentID: 610696)-->
+<!--
+Dear Professor,
+link: https://nurlan985.github.io/W3D2-maze.html
+
+I did this assignment on class It was easy.
+
+In additional I created function gameOver, youWin, start, and writeStatus.
+
+I used click, mouseover, mouseleave, addClass, removeClass functions for doing this assignment.
+    mouseover, mouseleave for catch lost or win.
+    click for start game.
+    addClass, removeClass for restart/lost game.
+
+I did mouseover for class ".boundary" and it will call gameOver();
+And I did mouseleave for div with Id="maze" and it also call gameOver(); It's if palyer want cheating.
+
+This assignment refreshed my knowledge about jQuery.
+
+This assignment took about 1 hour.
+
+
+Thanks,
+
+Best regards,
+Nurlan Kustutinov
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>W3D2 Maze</title>
+    <link rel="stylesheet" href="css/maze.css">
+
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/maze.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="main_menu" id="headerMenu"></div>
+</header>
+
+<h1>The Amazing Mouse Maze!</h1>
+<h2 id="status">Click the "S" to begin.</h2>
+
+<!-- This part of the page represents the maze -->
+<div id="maze">
+    <div id="start">S</div>
+    <div class="boundary" id="boundary1"></div>
+    <div class="boundary"></div>
+    <div class="boundary"></div>
+    <div class="boundary"></div>
+    <div class="boundary"></div>
+    <div id="end">E</div>
+</div>
+
+<p>
+    The object of this game is to guide the mouse cursor through the start area and get to the end area.  Be sure to avoid the walls:
+</p>
+
+<div class="boundary example"></div>
+
+<p>
+    Good luck!
+</p>
+
+<div id="footer"></div>
+
+<script src="scripts/jquery-3.3.1.min.js"></script>
+<script src="scripts/my-widgets.js"></script>
+</body>
+</html>
+
