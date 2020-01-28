@@ -1,0 +1,88 @@
+<!--Author: Nurlan Kustutinov (StudentID: 610696)-->
+<!--
+Dear professor,
+
+This is my Link:
+
+Part 1: https://nurlan985.github.io/W3D1Clock.html
+
+Part 2: https://nurlan985.github.io/W3D1Account.html
+
+
+I did first part around 30 minutes.
+
+there is I used .bind for function render because when run this function from setInterval, there is different context. so we should give this context by bind (or did this function by arrow function). render use some staff from this context.
+
+        It was very interesting, I learned a lot about javascript class.
+
+It is very informative.
+
+Second part I did around 2 hour. 
+
+It was easy, but it took some time.  
+
+It was very good practices for my new knowledge.
+
+I did data structures in JavaScript it is very interesting. It is good think. Before I worked a lot with data structure in C#.
+
+For close account I used splice, for add I used push.
+
+In Exercise e, I used account.constructor.name for show which account is showing from array in bank.
+
+Thanks,
+
+Best regards, 
+
+Nurlan Kustutinov
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>W3D1 Account</title>
+    <!-- add mocha css, to show results -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <!-- add mocha framework code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd'); // minimal setup
+    </script>
+    <!-- add chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+    <style>
+        #mocha-stats {
+            top: 260px;
+            position: absolute;
+        }
+    </style>
+    <script src="scripts/account.js"></script>
+    <script src="scripts/savingsaccount.js"></script>
+    <script src="scripts/checkingaccount.js"></script>
+    <script src="scripts/Bank.js"></script>
+    <script src="scripts/test.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<header>
+    <div class="main_menu" id="headerMenu"></div>
+</header>
+
+<div id="mocha"></div>
+
+
+<div id="footer"></div>
+<!-- run tests! -->
+<script>
+    mocha.run();
+</script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/my-widgets.js"></script>
+</body>
+</html>
+

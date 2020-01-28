@@ -1,0 +1,78 @@
+<!--Author: Nurlan Kustutinov (StudentID: 610696)-->
+<!--
+Dear Professor,
+
+This is my Link:
+
+Part 1: https://nurlan985.github.io/W3D1Clock.html
+
+Part 2: https://nurlan985.github.io/W3D1Account.html
+
+
+I did first part around 30 minutes.
+
+there is I used .bind for function render because when run this function from setInterval, there is different context. so we should give this context by bind (or did this function by arrow function). render use some staff from this context.
+
+        It was very interesting, I learned a lot about javascript class.
+
+It is very informative.
+
+Second part I did around 2 hour. 
+
+It was easy, but it took some time.  
+
+It was very good practices for my new knowledge.
+
+I did data structures in JavaScript it is very interesting. It is good think. Before I worked a lot with data structure in C#.
+
+For close account I used splice, for add I used push.
+
+In Exercise e, I used account.constructor.name for show which account is showing from array in bank.
+
+Thanks,
+
+Best regards,
+Nurlan Kustutinov
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>W3D1 Assignments</title>
+    <script src="scripts/W3D1Clock.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+<style>
+    .buttons{
+        margin: 20px;
+    }
+    body>h3{
+        margin-left: 20px;
+    }
+    #console{
+        margin: 20px;
+        padding: 5px;
+        background-color: lightgray;
+        color: #455aee;
+    }
+</style>
+</head>
+<body>
+<header>
+    <div class="main_menu" id="headerMenu"></div>
+</header>
+<h3>Look in the Chrome developer console to see the output. CTRL_SHIFT_J</h3>
+<div class="buttons">
+    <button id="btnStartClock">Start clock</button>
+    <button id="btnStopClock">Stop clock</button>
+</div>
+<h3>Console:</h3>
+<div id="console"></div>
+
+<div id="footer"></div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/my-widgets.js"></script>
+</body>
+</html>
+
