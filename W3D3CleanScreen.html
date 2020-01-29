@@ -18,7 +18,7 @@ this is a description of each function:
      */
     function getValue(id);
     /**
-     * Random integer
+     * Random integer, I used this function for get random number for located circle in the page.
      * @param max - maximum number which can be returned
      * @returns random number between 0 and max
      */
@@ -51,6 +51,13 @@ this is a description of each function:
      * binding start function to button start.
      */
     $("#start").on("click", start);
+
+    /**
+     * this is a delegated event handler
+     */
+    $(".circle-container")
+        .on("click", "div.circle", function () {this.remove();})
+        .on("mousemove", "div.circle", mousemove);
 
 
 Thanks,

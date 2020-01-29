@@ -13,7 +13,7 @@ $(function () {
     }
 
     /**
-     * Random integer
+     * Random integer, I used this function for get random number for located circle in the page.
      * @param max - maximum number which can be returned
      * @returns random number between 0 and max
      */
@@ -54,20 +54,30 @@ $(function () {
      */
     function growCircle() {
         let growthAmount = getValue("growthAmount");
+
         function grow(idx, oldValue){
             let newVal = (parseInt(oldValue)+parseInt(growthAmount));
             return newVal+"px";
         }
-        $(".circle").css("width", grow);
-        $(".circle").css("height", grow);
-        $(".circle").css("border-radius", function(idx, oldValue) {
-            return parseInt(oldValue)+growthAmount/2+"px";
-        });
+
+        /**
+         * mover to top left side for half growthAmount.
+         * @param idx
+         * @param oldValue
+         * @returns {string}
+         */
         function move(idx, oldValue) {
             return parseInt(oldValue)-growthAmount/2+"px";
         }
+        $(".circle").css("width", grow);
+        $(".circle").css("height", grow);
         $(".circle").css("top", move);
         $(".circle").css("left", move);
+
+        $(".circle").css("border-radius", function(idx, oldValue) {
+            return parseInt(oldValue)+growthAmount/2+"px";
+        });
+
     }
 
     /**
@@ -76,8 +86,6 @@ $(function () {
      */
     function getNewCircle() {
         return $("<div>",{
-            "click": function () {this.remove();},
-            "mousemove": mousemove,
             "class": "circle",
             "css":{
                 "background-color": getRandomColor(),
@@ -107,4 +115,12 @@ $(function () {
      * binding start function to button start.
      */
     $("#start").on("click", start);
+
+    /**
+     * this is a delegated event handler
+     */
+    $(".circle-container")
+        .on("click", "div.circle", function () {this.remove();})
+        .on("mousemove", "div.circle", mousemove);
+
 });
