@@ -1,0 +1,113 @@
+<!--Author: Nurlan Kustutinov (StudentID: 610696)-->
+<!--
+Dear Professor,
+
+Link: https://nurlan985.github.io/W3D3CleanScreen.html
+
+This assignment I did around 1 hour.
+I was easy.
+
+I used only one time append, for append circles to form. I collected circles to jquery array and append it to main div
+
+this is a description of each function:
+
+    /**
+     * This function for get value from element by Id
+     * @param id - element Id
+     * @returns value from element
+     */
+    function getValue(id);
+    /**
+     * Random integer
+     * @param max - maximum number which can be returned
+     * @returns random number between 0 and max
+     */
+    function getRandomInt(max);
+    /**
+     * this function return random color. I used it for set background-color for circle. In this function I used getRandomInt function
+     * @returns randomised color.
+     */
+    function getRandomColor();
+    /**
+     * function if mouse is move in circle this circle will get low opacity, if opacity is zero or less circle will be removed.
+     * @param event
+     */
+    function mousemove(event);
+    /**
+     * this function is callBack function for setInterval. every calling this function do greater every circle for settled growthAmount
+     */
+    function growCircle();
+     /**
+     * this function crete new completely ready circle and return.
+     * @returns circle object
+     */
+    function getNewCircle();
+     /**
+     * this function for create circles and start growing this circles. When I create circles I push it to array and all circles append to main div, not one by one.
+     */
+    function start();
+
+    /**
+     * binding start function to button start.
+     */
+    $("#start").on("click", start);
+
+
+Thanks,
+
+Best regards,
+Nurlan Kustutinov
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>W3D3 Clean Screen</title>
+    <link rel="stylesheet" href="css/w3d3-clean-screen.css">
+
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/w3d3-clean-screen.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="main_menu" id="headerMenu"></div>
+</header>
+<div class="circle-container">
+    <p>
+        <label for="circleWidth">Width:</label>
+    </p>
+    <p>
+        <input type="number" id="circleWidth" min="20" max="500" value="50">
+    </p>
+    <p>
+        <label for="growthAmount">Growth amount:</label>
+    </p>
+    <p>
+        <input type="number" id="growthAmount" min="1" max="500" value="10">
+    </p>
+    <p>
+        <label for="growRate">Grow Rate:</label>
+    </p>
+    <p>
+        <input type="number" id="growRate" min="50" value="250">
+    </p>
+    <p>
+        <label for="growRate">Number of circles:</label>
+    </p>
+    <p>
+        <input type="number" id="circleCount" min="1" value="12">
+    </p>
+    <p>
+        <button id="start">Start</button>
+    </p>
+</div>
+
+<div id="footer"></div>
+
+<script src="scripts/jquery-3.3.1.min.js"></script>
+<script src="scripts/my-widgets.js"></script>
+</body>
+</html>
+

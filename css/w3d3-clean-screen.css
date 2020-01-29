@@ -1,0 +1,19 @@
+.circle-container{
+    position: relative;
+    min-height: 500px;
+}
+.circle-container p{
+    margin: 5px 0 5px 50px;
+}
+
+p input{
+    width: 100px;
+}
+
+.circle{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    opacity: 1;
+}
